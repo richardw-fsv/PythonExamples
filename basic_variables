@@ -1,0 +1,57 @@
+'''
+In this code snippet, we demonstrate the use of basic variable types in Python, 
+including strings, floats, and booleans. We also show how to use type annotations 
+to indicate the expected type of a variable. Additionally, we illustrate the concept 
+of constants using uppercase variable names and the `Final` type hint from the `typing` 
+module.
+
+Note that while type annotations provide hints to developers and tools, they are not 
+enforced at runtime.
+'''
+
+from typing import Final
+
+# String example. Note that variable names are in snake_case, which is the convention 
+# in Python @see https://peps.python.org/pep-0008/.
+some_message: str = "DON'T PANIC!"
+print(
+    f"The cover of the Hitchhiker's Guide to the Galaxy says: {some_message} "
+    "in large, friendly letters."
+)
+
+# Change the message variable to a different string
+some_message = "The best conversation I had was over forty million years ago…. "\
+    "And that was with a coffee machine."
+print(f"Marvin the Paranoid Android said: {some_message}")
+
+# Float example
+infinite_improbability_drive_level: float = 2.0e100
+print(
+    f"We are now cruising at a level of {infinite_improbability_drive_level} "
+    "to one against and falling"
+)
+
+# Boolean example
+is_galaxy_friendly: bool = True
+print(f"Is the galaxy friendly? {is_galaxy_friendly}")
+
+# Careful! Types are not enforced at runtime, so you can assign a value of a different type
+# to the same variable. With python.analysis.typeCheckingMode set to "basic", 
+# the code will show a warning in the editor, but it will still run.
+is_galaxy_friendly = "Yes, it is!"
+print(f"Is the galaxy friendly? {is_galaxy_friendly}")
+
+
+
+# Uppercase variable names with underscores are  used by convention for constants in Python.
+MEANING_OF_LIFE_THE_UNIVERSE_AND_EVERYTHING: Final[int] = 42
+print("The meaning of life, the universe, and everything is: "
+    f"{MEANING_OF_LIFE_THE_UNIVERSE_AND_EVERYTHING}")
+
+# Careful!This will work but it is poor practice to change the value of a constant. 
+# with python.analysis.typeCheckingMode set to "basic",the code will show a warning in 
+# the editor, but it will still run.
+MEANING_OF_LIFE_THE_UNIVERSE_AND_EVERYTHING = 43
+print("The meaning of life, the universe, and everything is now: "
+    f"{MEANING_OF_LIFE_THE_UNIVERSE_AND_EVERYTHING}")
+
