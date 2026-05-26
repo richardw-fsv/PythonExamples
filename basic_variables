@@ -41,8 +41,6 @@ print(f"Is the galaxy friendly? {is_galaxy_friendly}")
 is_galaxy_friendly = "Yes, it is!"
 print(f"Is the galaxy friendly? {is_galaxy_friendly}")
 
-
-
 # Uppercase variable names with underscores are  used by convention for constants in Python.
 MEANING_OF_LIFE_THE_UNIVERSE_AND_EVERYTHING: Final[int] = 42
 print("The meaning of life, the universe, and everything is: "
@@ -54,4 +52,3 @@ print("The meaning of life, the universe, and everything is: "
 MEANING_OF_LIFE_THE_UNIVERSE_AND_EVERYTHING = 43
 print("The meaning of life, the universe, and everything is now: "
     f"{MEANING_OF_LIFE_THE_UNIVERSE_AND_EVERYTHING}")
-
